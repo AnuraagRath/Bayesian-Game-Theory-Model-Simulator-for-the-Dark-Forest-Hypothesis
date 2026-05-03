@@ -31,12 +31,139 @@ We formalize these questions using:
 
 ---
 
+## 🧮 Mathematical Formulation
+
+We model the Dark Forest scenario as a **two-player Bayesian game of incomplete information**.
+
+---
+
+### 🔹 1. Types and Prior
+
+Each civilization $i \in \{A, B\}$ has a private type:
+
+- $\theta_i \in \{H, P\}$
+- $H$ = Hostile  
+- $P$ = Peaceful  
+
+Types are drawn independently by Nature:
+
+$$
+P(\theta_i = H) = p, \quad P(\theta_i = P) = 1 - p
+$$
+
+---
+
+### 🔹 2. Signaling and Information Structure
+
+Each civilization sends a signal $m \in \{H, P\}$.
+
+Two regimes are considered:
+
+- **Pooling equilibrium (deception allowed):**
+
+$$
+P(m = P \mid H) = 1, \quad P(m = P \mid P) = 1
+$$
+
+- **Separating equilibrium (truthful signaling):**
+
+$$
+P(m = P \mid H) = 0, \quad P(m = P \mid P) = 1
+$$
+
+---
+
+### 🔹 3. Bayesian Belief Update
+
+Upon observing signal $m$, agents update beliefs using Bayes’ rule:
+
+$$
+\mu(H \mid m) =
+\frac{P(m \mid H)\,p}{P(m \mid H)\,p + P(m \mid P)\,(1 - p)}
+$$
+
+- Pooling: $\mu(H \mid m) = p$  
+- Separating: $\mu(H \mid m) = 0$
+
+---
+
+### 🔹 4. Expected Utility
+
+Each agent chooses between two actions:
+
+- COEXIST  
+- STRIKE  
+
+Expected utilities:
+
+$$
+EU(\text{COEXIST}) =
+\mu(H \mid m)\,U_{ext} +
+(1 - \mu(H \mid m))\,U_{coop}
+$$
+
+$$
+EU(\text{STRIKE}) = U_{strike}
+$$
+
+Decision rule:
+
+$$
+\text{Choose STRIKE if } EU(\text{STRIKE}) > EU(\text{COEXIST})
+$$
+
+---
+
+### 🔹 5. Cooperation Threshold
+
+The critical prior $p^*$ where agents are indifferent:
+
+$$
+p^* =
+\frac{U_{strike} - U_{coop}}{U_{ext} - U_{coop}}
+$$
+
+- If $p > p^*$ → STRIKE equilibrium  
+- If $p < p^*$ → COEXIST equilibrium  
+
+---
+
+### 🔹 6. Information Content (KL Divergence)
+
+We measure how much the signal changes beliefs:
+
+$$
+D_{KL}(P \parallel Q) =
+p \log\frac{p}{\mu} +
+(1 - p)\log\frac{1 - p}{1 - \mu}
+$$
+
+- Pooling → $D_{KL} = 0$  
+- Separating → $D_{KL} = \infty$
+
+---
+
+### 🔹 7. Equilibrium Insight
+
+When deception is allowed and incentive-compatible:
+
+- Signals carry **no information**
+- Beliefs collapse to the prior: $\mu(H \mid m) = p$
+- Decision reduces to a threshold rule on $p$
+
+This yields the central result:
+
+> If extinction risk is sufficiently large, **rational agents choose STRIKE**, leading to deterministic mutual destruction.
+  
+---
+
 ## ⚙️ Key Features
 
 ### 🔹 True Bayesian Game (Two-Sided)
 - Independent type draws for both civilizations  
 - Symmetric reasoning under incomplete information  
 - Real stochasticity from joint type distributions  
+
 
 ---
 
