@@ -1,4 +1,4 @@
-# 🌌 Dark Forest Bayesian Game Simulator
+# 🌌 A Bayesian Game Theory Model/Simulator for the Dark Forest Hypothesis
 
 ![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)
 ![Status](https://img.shields.io/badge/Status-Research%20Grade-success)
