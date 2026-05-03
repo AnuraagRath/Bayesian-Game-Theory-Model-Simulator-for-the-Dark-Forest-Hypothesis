@@ -6,7 +6,7 @@
 ![Game Theory](https://img.shields.io/badge/Field-Game%20Theory-purple)
 ![Simulation](https://img.shields.io/badge/Type-Bayesian%20Simulation-orange)
 
-> *“The universe is not kind. It is silent—and rational.”*
+> *“The universe is not kind. It is silent and rational.”*
 
 A rigorous computational implementation of the **Dark Forest hypothesis** as a **Bayesian game of incomplete information**, inspired by *The Dark Forest* by Liu Cixin and popularized globally through the Netflix adaptation of *3 Body Problem*.
 
@@ -27,7 +27,7 @@ We formalize these questions using:
 - Incentive-compatible signaling  
 - Two-sided Monte Carlo simulation  
 
-> The result is a **fully consistent epistemic game engine**—not a toy model.
+> The result is a **fully consistent epistemic game engine**not a toy model.
 
 ---
 
@@ -221,7 +221,7 @@ Result:
 
 > **100% Mutual Destruction**
 
-This is not random—it is a **deterministic equilibrium outcome**.
+This is not random, it is a **deterministic equilibrium outcome**.
 
 ---
 
@@ -255,7 +255,7 @@ Monte Carlo outcomes:
 - 🟥 Mutual Destruction: **100.0%**  
 - 🟨 Other outcomes: **0.0%**
 
-> The simulation validates equilibrium—not randomness.
+> The simulation validates equilibrium, not randomness.
 
 ---
 
@@ -323,8 +323,8 @@ dark_forest.py
 
 This project is inspired by:
 
-* 📖 *The Dark Forest* — Liu Cixin
-* 🎥 *3 Body Problem* — Netflix adaptation
+* 📖 *The Dark Forest* by Liu Cixin
+* 🎥 *3 Body Problem*, Netflix adaptation
 
 These works explore the unsettling idea that:
 
@@ -371,7 +371,7 @@ MIT License
 ## ✨ Final Thought
 
 > In a universe where trust cannot be verified and survival is everything,
-> silence may not be fear—
+> silence may not be fear
 > it may be **strategy**.
 
 
